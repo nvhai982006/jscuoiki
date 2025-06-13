@@ -36,7 +36,10 @@ root.addEventListener('click', (e) => {
 function createCartItemElement(item){
     return`
         <div class="item-list" type="adventure">
-            <div class="clear">   
+            <div class="clear">
+                    <div class="comingSoon-item">
+                        <img src="${item.imgSrc}">
+                    </div>   
                 <div class="down-item">${item.name}                        
                 </div>
                 <div class="library_remve" >

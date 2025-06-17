@@ -8,7 +8,7 @@ body{
     background-color: #f0f0f0;
 }
 header{
-    background-image: url(anh/banner-bg.jpg);
+    background-image: url(../anh/banner-bg.jpg);
     border-bottom-left-radius: 150px;
     border-bottom-right-radius: 150px;
     background-size: cover;
@@ -22,7 +22,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    background-image: url(anh/banner-bg.jpg);
+    background-image: url(../anh/banner-bg.jpg);
     background-size: cover;
     z-index: 1;
 }
@@ -180,7 +180,7 @@ button:hover{
 }
 .end-item{
     margin-top: 80px;
-    background-image:url(anh/banner-bg.jpg);
+    background-image:url(../anh/banner-bg.jpg);
     text-align: center;
     font-size: 25px;
     padding: 30px;

@@ -193,7 +193,7 @@ textarea{
 }
 .end-item{
     margin-top: 80px;
-    background-image:url(/anh/banner-bg.jpg);
+    background-image:url(../anh/banner-bg.jpg);
     text-align: center;
     font-size: 25px;
     padding: 30px;

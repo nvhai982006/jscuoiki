@@ -12,9 +12,10 @@ if(images.length === 0 ){
 else{
     conten1.style.display='none';
     conten2.style.display='flex';
-    remderLibrary();
+    renderLibrary();
 }
-function remderLibrary(){
+// Hàm để hiển thị thư viện
+function renderLibrary(){
     images.forEach(item => {
         const itemElement=createCartItemElement(item);
         root.insertAdjacentHTML('beforeend',itemElement);

@@ -2,7 +2,7 @@ const filerBtns= document.querySelectorAll('.conten-text');
 const productCards=document.querySelectorAll('.item-list');
 
 const overlay=document.getElementById('overlay');
-overlay.addEventListener('click', closeViewDetail);
+overlay.addEventListener('click', closeViewDetail);// Khi người dùng click vào overlay, đóng chi tiết sản phẩm
 
 let images=JSON.parse(localStorage.getItem('images')) || [];
 
@@ -12,7 +12,7 @@ productCards.forEach(p => {
         if(target.classList.contains('down-item')){
             p.classList.add('active')
             overlay.style.display='block'
-        }
+        }// Nếu người dùng click vào nút "Xem chi tiết"
         if(target.classList.contains('shopping')){
             const imgSrc=p.querySelector('img').src;
             const name=p.querySelector('.name').innerText;
@@ -28,7 +28,8 @@ productCards.forEach(p => {
                 existingItem.quantity++
             else
                 images.unshift(newImages);
-            localStorage.setItem('images',JSON.stringify(images));
+            localStorage.setItem('images',JSON.stringify(images));//dưa dữ liệu vào localStorage
+            // Hiển thị thông báo
             closeViewDetail()
             alert(`Đã thêm ${newImages.name} vào thư viện `)
         }

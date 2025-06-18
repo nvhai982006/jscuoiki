@@ -154,7 +154,7 @@ form button{
     font-size: 20px;
     padding: 10px;
     background: orange;
-    border: 1px solid #fff;
+    border: 1px solid orange;
     border-radius: 25px;
     transform: scale(1);
 }

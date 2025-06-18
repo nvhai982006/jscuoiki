@@ -5,7 +5,6 @@ const noResult = document.getElementById("noResult");
 
 const filerBtns= document.querySelectorAll('.conten-text, .comingSoon-text');
 const productCards=document.querySelectorAll('.conten-item, .comingSoon-list');
-
 const images=JSON.parse(localStorage.getItem('images'))
 
 const overlay = document.getElementById('overlay')
@@ -22,6 +21,7 @@ productCards.forEach(p=>{
       p.classList.add('active')
       overlay.style.display='block'
     }
+    // Nếu người dùng click vào nút "Thêm vào thư viện"
     if(target.classList.contains('shopping')){
       const imgSrc=p.querySelector('img').src;
       const name=p.querySelector('.name').innerText;
@@ -37,8 +37,9 @@ productCards.forEach(p=>{
         existingItem.quantity++
       else
         images.unshift(newImages);
-        localStorage.setItem('images',JSON.stringify(images));
+        localStorage.setItem('images',JSON.stringify(images));//dưa dữ liệu vào localStorage
         closeViewDetail()
+      // Hiển thị thông báo
         alert(`Đã thêm ${newImages.name} vào thư viện `)
     }
   })
@@ -54,14 +55,14 @@ searchInput.addEventListener("keyup", function () {
   const filter = searchInput.value.toLowerCase().trim();
   let count = 0;
 
-  // Nếu người dùng chưa gõ gì → ẩn danh sách và thông báo
+  // Nếu người dùng chưa gõ gì ẩn danh sách và thông báo
   if (filter === "") {
     fruitList.style.display = "none";
     noResult.style.display = "none";
     return;
   }
 
-  // Người dùng đã gõ → hiện danh sách
+  // Người dùng đã gõ  hiện danh sách
   fruitList.style.display = "block";
 
   for (let i = 0; i < fruits.length; i++) {

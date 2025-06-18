@@ -165,13 +165,15 @@ form button{
     text-decoration: none;
     color:#fff;
 }
-.sign-up{
-    display: none;
-}
 .Register:hover{
     cursor: pointer;
     color: red;
     transition-delay: 0.1s;
+}
+.error{
+    color: red;
+    font-size: 15px;
+    display: none;
 }
 button:hover{
     cursor: pointer;

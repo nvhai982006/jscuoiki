@@ -2,6 +2,16 @@ const conten1=document.querySelector('.conten1')
 const conten2=document.querySelector('.conten2')
 
 const root=document.getElementById('root');
+//thêm tên người dùng vào trang
+const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+const userName = document.getElementById('currentUser');
+
+if (currentUser) {
+  userName.innerHTML =currentUser.username;
+}else {
+  userName.innerHTML = '';
+}
+
 
 let images=JSON.parse(localStorage.getItem('images')) || [];
 

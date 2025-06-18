@@ -32,24 +32,32 @@
         </div>
         <div class="header-list">
             <div class="header-item">
-                <h1>SIGN UP</h1>
+                <h1>SIGN IN</h1>
             </div>
         </div>
     </header>
     <div class="container">
-      <form action="" class="sign-in" id="signinForm">
-        <div class="conten">
-            <h3>SIGN IN</h3>
-            <input type="email" placeholder="email" id="email"><br>
-            <input type="password" placeholder="password" id="password"><br>
-            <button class="sign_In"> sign in</button><br>
-        </div>
-        <div class="conten1"><span>You don't have an account yet?</span><span class="Register"><a href="signup.html">Register here</a></span></div>
-      </form>.
+      <form id="signupForm" action="" class="sign-up">
+        <h3>SIGN UP</h3>
+        <input type="text" placeholder="name" id="name"><br>
+        <div class="error" id="nameError">Please do not leave this blank</div>
+        <input type="text" placeholder="age" id="age"><br>
+        <div class="error" id="ageError">Please do not leave this blank</div>
+        <input type="email"  placeholder="email" id="email"><br>
+        <div class="error" id="emailError">Please do not leave this blank</div>
+        <input type="password" placeholder="password" id="password"><br>
+        <div class="error" id="passwordError">Please do not leave this blank</div>
+        <input type="password" placeholder="confirm password" id="confirmPassword"><br>
+        <div class="error" id="confirmPasswordError">Please do not leave this blank</div>
+        <button type="submit" id="save">create account</button>
+         <div class="conten1"><span>You don't have an account yet?</span><span class="Register"><a href="sign.html">Register here</a></span></div>
+      </form>
+      
     </div>
+    
     <div class="end-item">
         <p>©2025-Copyright THEBEST-SDT:0100100có</p>
     </div>
-    <script src="js/sign.js"></script>
+    <script src="js/signup.js"></script>
 </body>
 </html>

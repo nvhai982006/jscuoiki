@@ -9,7 +9,15 @@ const images=JSON.parse(localStorage.getItem('images'))
 
 const overlay = document.getElementById('overlay')
 overlay.addEventListener('click', closeViewDetail);
+// thêm tên người dùng vào trang
+const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+const userName = document.getElementById('currentUser');
 
+if (currentUser) {
+  userName.innerHTML =currentUser.username;
+}else {
+  userName.innerHTML = '';
+}
 
 productCards.forEach(p=>{
   p.addEventListener('click',(e)=>{

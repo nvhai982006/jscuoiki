@@ -167,7 +167,7 @@ nav ul li:hover{
 #fruitList li{
     padding-top: 10px;
 }
-#fruitList a{
+#fruitList li{
     color: black;
     margin-left: 30px;
     text-decoration: none;    
@@ -283,6 +283,21 @@ nav ul li:hover{
     height: 220px;
     background-size: cover;
 }
+@media screen and (max-width:760px) {
+    .conten-item{
+        width: 150px;
+    }
+    .conten-item img{
+        width: 150px;
+        height: 150px;
+    }
+    .down-item{
+        font-size: 12px;
+    }
+    .down-item .name{
+        font-size: 13px;
+    }
+}
 .down-item{
     display: flex;
     justify-content: space-between;
@@ -380,6 +395,27 @@ nav ul li:hover{
     height: 200px;
     background-size: cover;
 }
+@media screen and (max-width:760px) {
+    .comingSoon-list{
+        width: 150px;
+    }
+    .comingSoon-list .comingSoon-item img{
+        width: 150px;
+        height: 150px;
+    }
+    .down-comingSoon{
+        font-size: 10px;
+        flex-wrap: wrap;
+    }
+    .down-comingSoon .name{
+        font-size: 9px;
+    }
+    .down-comingSoon .see{
+        font-size: 12px;
+        padding: 5px;
+        width:80px;
+    }
+}
 .down-comingSoon {
     text-align: center;
     display: flex;
@@ -412,6 +448,7 @@ nav ul li:hover{
 .comenting{
     display: none;
 }
+
 .comingSoon-list.active{
     position: fixed;
     top: 50%;
@@ -456,6 +493,7 @@ nav ul li:hover{
     height: 290px;
     transform: scale(1);
 }
+
 .categories-item a img{
     border-radius: 20px;
     width: 250px;
@@ -465,6 +503,19 @@ nav ul li:hover{
 .down-categories {
     text-align: center;
     padding: 20px;      
+}
+@media screen and (max-width:760px) {
+    .categories-list{
+        width: 150px;
+        height: 200px;
+    }
+    .categories-item a img{
+        width: 150px;
+        height: 150px;
+    }
+    .down-categories{
+        font-size: 10px;
+    }
 }
 .categories-list:hover{
     transform: scale(1.1);
@@ -482,6 +533,12 @@ nav ul li:hover{
     width: 500px;
     height: 500px;
     border-radius: 40px;
+}
+@media screen and (max-width:500px) {
+    .end-text img{
+        width: 400px;
+        height: 300px;
+    }
 }
 .end-list{
     position: relative;

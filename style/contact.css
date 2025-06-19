@@ -83,11 +83,15 @@ summary:hover{
 }
 details ul li{
     padding-top: 5px;
+    padding-left: 9px;
+}
+details .currentUser{
+    color: blue;
+    font-weight: 600;
 }
 details a{
     text-decoration: none;
     color: black;
-    padding: 9px;
 }
 details li a:hover{
     color: red;

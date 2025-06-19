@@ -4,12 +4,12 @@ const conten2=document.querySelector('.conten2')
 const root=document.getElementById('root');
 //thêm tên người dùng vào trang
 const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-const userName = document.getElementById('currentUser');
+const userName = document.querySelectorAll('.currentUser');
 
 if (currentUser) {
-  userName.innerHTML =currentUser.username;
+  userName.forEach(name => name.innerHTML = currentUser.username);
 }else {
-  userName.innerHTML = '';
+  userName.forEach(name => name.innerHTML = '');
 }
 
 

@@ -11,14 +11,16 @@ const overlay = document.getElementById('overlay')
 overlay.addEventListener('click', closeViewDetail);
 // thêm tên người dùng vào trang
 const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-const userName = document.getElementById('currentUser');
+const userName = document.querySelectorAll('.currentUser');
 
 if (currentUser) {
-  userName.innerHTML =currentUser.username;
+  userName.forEach(name => name.innerHTML = currentUser.username);
 }else {
-  userName.innerHTML = '';
+  userName.forEach(name => name.innerHTML = '');
 }
 
+
+// Thêm sự kiện click cho các nút lọc
 productCards.forEach(p=>{
   p.addEventListener('click',(e)=>{
     const target= e.target;

@@ -5,12 +5,12 @@ const overlay=document.getElementById('overlay');
 overlay.addEventListener('click', closeViewDetail);// Khi người dùng click vào overlay, đóng chi tiết sản phẩm
 // thêm tên người dùng vào trang
 const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-const userName = document.getElementById('currentUser');
+const userName = document.querySelectorAll('.currentUser');
 
 if (currentUser) {
-  userName.innerHTML =currentUser.username;
+  userName.forEach(name => name.innerHTML = currentUser.username);
 }else {
-  userName.innerHTML = '';
+  userName.forEach(name => name.innerHTML = '');
 }
 
 

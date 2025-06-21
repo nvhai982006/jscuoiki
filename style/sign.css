@@ -165,7 +165,11 @@ form button{
     text-decoration: none;
     color:#fff;
 }
-.Register:hover{
+.Register a{
+    text-decoration: none;
+    color: black;
+}
+.Register a:hover{
     cursor: pointer;
     color: red;
     transition-delay: 0.1s;

@@ -1,7 +1,4 @@
-const searchInput = document.getElementById("searchInput");
-const fruitList = document.getElementById("fruitList");
-const fruits = fruitList.getElementsByTagName("li");
-const noResult = document.getElementById("noResult");
+
 
 const filerBtns= document.querySelectorAll('.conten-text, .comingSoon-text');
 const productCards=document.querySelectorAll('.conten-item, .comingSoon-list');
@@ -61,31 +58,3 @@ function closeViewDetail(){
 }
 
 
-searchInput.addEventListener("keyup", function () {
-  const filter = searchInput.value.toLowerCase().trim();
-  let count = 0;
-
-  // Nếu người dùng chưa gõ gì ẩn danh sách và thông báo
-  if (filter === "") {
-    fruitList.style.display = "none";
-    noResult.style.display = "none";
-    return;
-  }
-
-  // Người dùng đã gõ  hiện danh sách
-  fruitList.style.display = "block";
-
-  for (let i = 0; i < fruits.length; i++) {
-    const text = fruits[i].textContent.toLowerCase();
-
-    if (text.includes(filter)) {
-      fruits[i].style.display = "block";
-      count++;
-    } else {
-      fruits[i].style.display = "none";
-    }
-  }
-
-  // Hiện hoặc ẩn dòng "Không tìm thấy kết quả"
-  noResult.style.display = count === 0 ? "block" : "none";
-});
